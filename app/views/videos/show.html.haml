@@ -1,0 +1,28 @@
+:javascript
+  $(document).ready(function(){
+    $('body').css("background-image","url(/assets/#{@video.title.downcase.split.join('_')}-front.jpg)");
+    $('body').css("background-position","center");
+    $('.bg').fadeOut(1000);
+    });
+
+.bg
+
+.video-data
+
+  %h1
+    = "#{@video.title} (#{@video.year})"
+
+
+  - [:description, :director, :duration].each do |d|
+    %p
+      %span= t(d)
+      = @video[d]
+      = "min." if d == :duration
+
+  =link_to "Watch trailer", "#inline", :id => "trailer", :class => "fancybox inline"
+
+  #inline{:style => "display:none;"}
+    %iframe{:width => 560, :height=> 315, :src => @video.trailer_url, :frameborder => 0, :allowfullscreen => true}
+
+  = link_to 'Edit', edit_video_path(@video)
+  = link_to 'Back', videos_path

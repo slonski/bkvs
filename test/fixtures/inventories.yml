@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_id: 1
+  video_id: 1
+  amount: 1
+
+two:
+  location_id: 1
+  video_id: 1
+  amount: 1

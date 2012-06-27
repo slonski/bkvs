@@ -1,0 +1,15 @@
+%h1
+  Locations
+.container
+  - @locations.each do |location|
+    = location.name
+    |
+    = link_to 'Edit', edit_location_path(location)
+    |
+    = link_to 'Delete', location, confirm: 'Are you sure?', method: :delete
+    %br
+
+  %p
+    = link_to 'New Location', new_location_path
+    |
+    = link_to 'Back', videos_path

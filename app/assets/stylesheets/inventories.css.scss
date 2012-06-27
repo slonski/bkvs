@@ -1,0 +1,13 @@
+.result {
+  height:100px;
+  margin-top: 50px;
+  font-size:30px;
+  color:#555;
+  span {
+    a {
+      color:#777;
+      text-decoration: none;
+      &:hover{color:#ccc;}
+    }
+  }
+}

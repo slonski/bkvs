@@ -1,0 +1,28 @@
+%h1
+  Inventories
+.container
+  %select.location-select
+    %option{:value => 0}
+      Select location...
+    - @locations.each do |location|
+      %option{:value => location.id}= location.name
+  %select.video-select
+    %option{:value => 0}
+      Select video...
+    - @videos.each do |video|
+      %option{:value => video.id}= video.title
+  %button.check-stock
+    Check
+  .result
+    In stock:
+    %span
+  %p
+  -#- @inventories.each do |inventory|
+  -#  = inventory.location.name
+  -#  = " - #{inventory.video.title} ("
+  -#  = link_to "#{inventory.amount}", edit_inventory_path(inventory)
+  -#  )
+  -#  %br
+  %p= link_to 'Back', videos_path
+
+
