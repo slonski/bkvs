@@ -1,0 +1,20 @@
+%p#notice= notice
+
+%p
+  %b
+    Location:
+    = @inventory.location_id
+
+%p
+  %b
+    Video:
+  = @inventory.video_id
+
+%p
+  %b
+    Amount:
+  = @inventory.amount
+
+
+= link_to 'Edit', edit_inventory_path(@inventory)
+= link_to 'Back', inventories_path
