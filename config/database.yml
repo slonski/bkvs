@@ -19,16 +19,17 @@ test:
   adapter: mysql2
   host: localhost
   user: root
-  database: bkvs
+  database: bkvs_test
   pool: 5
   timeout: 1000
   encoding: utf8
 
 production:
   adapter: mysql2
-  host: localhost
+  host: 23.21.163.89
   user: root
-  database: bkvs
-  pool: 5
-  timeout: 1000
+  password:
+  database: bkvs_production
+  pool: 10
+  timeout: 5000
   encoding: utf8
