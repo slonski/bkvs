@@ -1,33 +1,10 @@
 %h1
   = image_tag "logo.png"
 
-
 .videos
   - @videos.each do |video|
     = link_to video_list_image(video), video
 
-
-
-  -#%h2= video.title
-  -#%p= video.description
-  -#%p
-  -#  Year:
-  -#  %span= video.year
-  -#%p
-  -#  Director:
-  -#  %span= video.director
-  -#%p
-  -#  Length:
-  -#  %span= "#{video.duration} min"
-  -#%p
-  -#  In stock at:
-  -#  = in_stock(video.id)
-
-
--#  %p= link_to 'Show', video
--#  %p= link_to 'Edit', edit_video_path(video)
--#  %p= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete
--#
 = link_to 'New Video', new_video_path
 |
 = link_to 'Locations', locations_path
